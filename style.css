@@ -36,6 +36,21 @@ body {
     overflow-x: hidden;
 }
 
+/* Background Video Styling */
+#bg-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+    opacity: 0.6;
+    /* Membuat teks di depan video tetap terlihat jelas */
+}
+
 /* Glassmorphism Effect untuk Card - disesuaikan untuk tema gelap */
 .card-container {
     background: var(--card-bg);
