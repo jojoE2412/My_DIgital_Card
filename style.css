@@ -1,0 +1,204 @@
+/* style.css */
+:root {
+    /* Palet warna gelap modern berkelas */
+    --bg-gradient: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    --card-bg: rgba(20, 20, 20, 0.4);
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.7);
+    --btn-bg: rgba(255, 255, 255, 0.08);
+    /* Tombol transparan */
+    --btn-hover: rgba(255, 255, 255, 0.15);
+
+    /* Warna original brand sosial media */
+    --btn-wa: #25D366;
+    --btn-ig: #E1306C;
+    --btn-gh: #24292e;
+    /* Hitam khas Github */
+    --btn-li: #0077b5;
+    /* Biru khas LinkedIn */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-gradient);
+    color: var(--text-primary);
+    padding: 20px;
+    overflow-x: hidden;
+}
+
+/* Glassmorphism Effect untuk Card - disesuaikan untuk tema gelap */
+.card-container {
+    background: var(--card-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Animasi masuk */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.profile-pic-container {
+    margin-bottom: 20px;
+}
+
+/* Foto profil berbentuk bulat */
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.3s ease;
+}
+
+/* AI Hover Effect untuk gambar */
+.profile-pic:hover {
+    transform: scale(1.1) rotate(5deg);
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.profile-pic-container.small .profile-pic {
+    width: 80px;
+    height: 80px;
+    border-width: 3px;
+}
+
+.name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+
+.role {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.bio {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 12px;
+    background: transparent;
+    transition: all 0.4s ease;
+    cursor: default;
+}
+
+/* AI Hover Effect untuk teks Bio */
+.bio:hover {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-2px);
+}
+
+/* Styling Tombol secara umum */
+.nav-button,
+.link-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    background: var(--btn-bg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    /* Border tipis untuk dark theme */
+}
+
+.nav-button:hover,
+.link-button:hover {
+    background: var(--btn-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Links Container */
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link-button .icon {
+    margin-right: 12px;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* INTERACTIVE BRAND HOVERS */
+.whatsapp:hover {
+    background: var(--btn-wa);
+    border-color: var(--btn-wa);
+}
+
+.instagram:hover {
+    background: var(--btn-ig);
+    border-color: var(--btn-ig);
+}
+
+/* Github akan menggunakan background hitam yang solid dengan efek garis putih saat di-hover */
+.github:hover {
+    background: var(--btn-gh);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+.linkedin:hover {
+    background: var(--btn-li);
+    border-color: var(--btn-li);
+}
+
+/* Back button (Kembali ke home) */
+.back-button {
+    margin-top: 15px;
+    background: transparent;
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+footer {
+    margin-top: 30px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}

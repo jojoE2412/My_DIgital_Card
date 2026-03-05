@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Digital Card - Joshua Emmanuel</title>
+    <meta name="description" content="Kartu nama digital dan portofolio singkat.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome CDN untuk ikon aplikasi asli -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="card-container">
+        <header>
+            <div class="profile-pic-container">
+                <img src="profile.jpg" alt="Foto Profil" class="profile-pic" id="profile-image">
+            </div>
+            <h1 class="name" id="user-name">Joshua Emmanuel</h1>
+            <h2 class="role" id="user-role">Full Stack Developer</h2>
+        </header>
+
+        <main>
+            <p class="bio" id="user-bio">
+                Halo! Saya adalah seorang Full Stack Developer pemula yang penuh semangat. Saat ini, saya sedang
+                menempuh pendidikan di <strong>SMKN 2 Surakarta</strong> mengambil jurusan <strong>Pengembangan
+                    Perangkat Lunak dan Gim (PPLG)</strong>. Saya sangat antusias untuk terus belajar teknologi baru dan
+                mengembangkan keahlian saya di dunia programming.
+            </p>
+
+            <a href="links.html" class="nav-button" id="nav-links">Connect with Me &rarr;</a>
+        </main>
+
+        <footer>
+            <p>&copy; <span id="year"></span> <span id="footer-name">Joshua Emmanuel</span>. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
